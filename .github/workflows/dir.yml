@@ -30,8 +30,8 @@ jobs:
         name: Checkout Repo
       - name: create directory
         run : |
-          mkdir -p .github/workflows/-steps
-          echo "New Directory is created successfully" > .github/workflows/-steps/README.md
+          mkdir -p demowf
+          echo "New Directory is created successfully" > demowf/README.md
       - name: secret validation
         run: 
           echo "$GITHUB_TOKEN"
@@ -39,7 +39,7 @@ jobs:
         run: |
           git config --global user.name "RajeshAnugula"
           git config --global user.email "angularajesh.kumar@infosys.com"
-          git add .github/workflows/-steps/*
+          git add demowf/*
           git commit -m "Create new folder"
           git push
         env:
@@ -47,9 +47,9 @@ jobs:
       - name: folder validation
         run: |
           if [-d ".github/workflows/-steps"];then
-            echo "Folder .github/workflows/-steps is created successfully;
+            echo "Folder demowf/README.md is created successfully;
           else
-            echo Folder .github/workflows/-steps doesnot exist;
+            echo Folder demowf/README.md doesnot exist;
             exit 1;
           fi
       
