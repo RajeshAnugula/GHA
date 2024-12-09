@@ -30,11 +30,11 @@ jobs:
           mkdir -p ./.github/workflows/-steps
           echo "New Directory is created successfully"
       - name: Commit and Push
-          run:
-            git config --global user.name "RajeshAnugula"
-            git config --global user.email "angularajesh.kumar@infosys.com"
-            git add *
-            git commit -m "Create new folder"
-            git push
+        run:
+          git config --global user.name "RajeshAnugula"
+          git config --global user.email "angularajesh.kumar@infosys.com"
+          git add *
+          git commit -m "Create new folder"
+          git push
           env:
             GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
