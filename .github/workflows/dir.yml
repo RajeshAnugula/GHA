@@ -32,7 +32,6 @@ jobs:
       - name: secret validation
         run: 
           echo "$GITHUB_TOKEN"
-      - name: file validation
       - name: Commit and Push
         run: |
           git config --global user.name "RajeshAnugula"
