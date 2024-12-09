@@ -30,6 +30,7 @@ jobs:
         name: Checkout Repo
       - name: create directory
         run : |
+          rm -d demowf
           mkdir -p demowf
           echo "New Directory is created successfully" > demowf/README1.md
       - name: secret validation
@@ -47,7 +48,7 @@ jobs:
       - name: folder validation
         run: |
           if [-d "demowf"];then
-            echo "Folder demowf is created successfully;
+            echo Folder demowf is created successfully;
           else
             echo Folder demowf doesnot exist;
             exit 1;
