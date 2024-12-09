@@ -36,5 +36,5 @@ jobs:
           git add *
           git commit -m "Create new folder"
           git push
-          env:
-            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
