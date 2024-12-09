@@ -25,10 +25,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
         name: Checkout Repo
-      - name: create directrot
+      - name: create directory
         run : |
           mkdir -p ./.github/workflows/-steps
           echo "New Directory is created successfully"
+      - name: secret validation
+        run: 
+          echo "$GITHUB_TOKEN"
       - name: Commit and Push
         run: |
           git config --global user.name "RajeshAnugula"
@@ -38,6 +41,4 @@ jobs:
           git push
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: secret validation
-        run: 
-          echo "$GITHUB_TOKEN"
+      
