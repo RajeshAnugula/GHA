@@ -30,9 +30,8 @@ jobs:
         name: Checkout Repo
       - name: create directory
         run : |
-          rm -rf demowf
           mkdir -p demowf
-          echo "New Directory is created successfully" > demowf/README1.md
+          echo "New Directory is created successfully" > demowf/README.md
       - name: secret validation
         run: 
           echo "$GITHUB_TOKEN"
