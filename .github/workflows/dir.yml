@@ -27,8 +27,7 @@ jobs:
         name: Checkout Repo
       - name: create directory
         run : |
-          pwd
-          mkdir -p ./.github/workflows/-steps1
+          mkdir -p .github/workflows/-steps
           echo "New Directory is created successfully"
       - name: secret validation
         run: 
@@ -42,4 +41,12 @@ jobs:
           git push
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: folder validation
+        run: |
+          if [-d ".github/workflows/-steps"];then
+            echo "Folder .github/workflows/-steps is created successfully;
+          else
+            echo Folder .github/workflows/-steps doesnot exist;
+            exit 1;
+          fi
       
