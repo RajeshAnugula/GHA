@@ -46,10 +46,10 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: folder validation
         run: |
-          if [-d ".github/workflows/-steps"];then
-            echo "Folder demowf/README.md is created successfully;
+          if [-d "demowf"];then
+            echo "Folder demowf is created successfully;
           else
-            echo Folder demowf/README.md doesnot exist;
+            echo Folder demowf doesnot exist;
             exit 1;
           fi
       
