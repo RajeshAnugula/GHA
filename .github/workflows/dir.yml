@@ -46,7 +46,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: folder validation
         run: |
-          if [-d "demowf"];then
+          if [ -d "demowf" ];then
             echo Folder demowf is created successfully;
           else
             echo Folder demowf doesnot exist;
