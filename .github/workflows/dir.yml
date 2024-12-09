@@ -27,7 +27,7 @@ jobs:
         name: Checkout Repo
       - name: create directory
         run : |
-          echo "$pwd"
+          pwd
           mkdir -p ./.github/workflows/-steps1
           echo "New Directory is created successfully"
       - name: secret validation
