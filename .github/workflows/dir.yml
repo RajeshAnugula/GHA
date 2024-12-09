@@ -31,7 +31,7 @@ jobs:
       - name: create directory
         run : |
           mkdir -p demowf
-          echo "New Directory is created successfully" > demowf/README.md
+          echo "New Directory is created successfully" > demowf/README1.md
       - name: secret validation
         run: 
           echo "$GITHUB_TOKEN"
