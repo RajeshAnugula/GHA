@@ -28,7 +28,7 @@ jobs:
       - name: create directory
         run : |
           echo "$pwd"
-          mkdir -p ./.github/workflows/-steps
+          mkdir -p ./.github/workflows/-steps1
           echo "New Directory is created successfully"
       - name: secret validation
         run: 
