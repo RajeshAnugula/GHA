@@ -27,5 +27,5 @@ jobs:
         name: Checkout Repo
       - name: create directrot
         run : 
-          mkdir -p ./.github/workflows
+          mkdir -p ./.github/workflows/-steps
           echo "New Directory is created successfully"
