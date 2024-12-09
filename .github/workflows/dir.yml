@@ -28,10 +28,11 @@ jobs:
       - name: create directory
         run : |
           mkdir -p .github/workflows/-steps
-          echo "New Directory is created successfully"
+          echo "New Directory is created successfully" > .github/workflows/-steps/README.md
       - name: secret validation
         run: 
           echo "$GITHUB_TOKEN"
+      - name: file validation
       - name: Commit and Push
         run: |
           git config --global user.name "RajeshAnugula"
