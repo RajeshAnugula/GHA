@@ -30,7 +30,7 @@ jobs:
           mkdir -p ./.github/workflows/-steps
           echo "New Directory is created successfully"
       - name: Commit and Push
-        run:
+        run: |
           git config --global user.name "RajeshAnugula"
           git config --global user.email "angularajesh.kumar@infosys.com"
           git add *
