@@ -39,7 +39,7 @@ jobs:
         name: Uploading build logs
         with:
           name: build log
-          path: /home/runner/.npm/*
+          path: /home/runner/.npm/**/*
   
     
     
