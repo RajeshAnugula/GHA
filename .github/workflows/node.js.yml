@@ -19,6 +19,8 @@ jobs:
         os: [ ubuntu-latest ]
         node-version: [   18.x, 20.x, 22.x ]
           # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    outputs:
+      os: ${{ matrix.os}}
 
     steps:
       - uses: actions/checkout@v4
@@ -32,7 +34,7 @@ jobs:
       - name: List files in .npm directory
         run: ls -la /home/runner/.npm/
   upload:
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{needs.build.outputs.os }}
     needs: build
     steps:
       - uses: action/upload-artifact@v3
