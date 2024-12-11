@@ -26,7 +26,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
            node-version: ${{ matrix.node-version }}
-      - run: ls -lrt
       - run: npm init -y
       - run: npm install --verbose
       - run: npm run build --if-present
@@ -48,5 +47,6 @@ jobs:
            node-version: ${{ matrix.node-version }}
       - name: npm install, and test
         run: |
+          npm init -y
           npm install
           npm test
