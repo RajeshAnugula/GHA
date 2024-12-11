@@ -34,7 +34,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     needs: build
     steps:
-      - uses: action/ipload-artifact@v3
+      - uses: action/upload-artifact@v3
         name: Uploading Artifacts
         with:
           name: artifact name
