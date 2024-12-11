@@ -37,7 +37,7 @@ jobs:
     runs-on: ${{needs.build.outputs.os }}
     needs: build
     steps:
-      - uses: action/upload-artifact@v3
+      - uses: actions/upload-artifact@v3
         name: Uploading build logs
         with:
           name: build log
