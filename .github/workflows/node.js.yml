@@ -29,7 +29,8 @@ jobs:
       - run: npm init -y
       - run: npm install --verbose
       - run: npm run build --if-present --verbose
-    
+      - name: List files in .npm directory
+        run: ls -la /home/runner/.npm/
   upload:
     runs-on: ${{ matrix.os }}
     needs: build
