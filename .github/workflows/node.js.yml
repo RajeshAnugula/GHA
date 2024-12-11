@@ -35,10 +35,10 @@ jobs:
     needs: build
     steps:
       - uses: action/upload-artifact@v3
-        name: Uploading Artifacts
+        name: Uploading build logs
         with:
-          name: artifact name
-          path: build/
+          name: build log
+          path: /home/runner/.npm/*
   
     
     
