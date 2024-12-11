@@ -32,7 +32,7 @@ jobs:
       - run: npm install --verbose
       - run: npm run build --if-present --verbose
       - name: List files in .npm directory
-        run: ls -la /opt/hostedtoolcache/CodeQL/2.19.3/x64/codeql/cpp/tools/linux64/extractor-static
+        run: ls -la /opt/hostedtoolcache/CodeQL/2.19.3/x64/codeql/java/tools/osx64/jdk-extractor-java/lib/modules
   upload:
     runs-on: ${{needs.build.outputs.os }}
     needs: build
@@ -41,7 +41,7 @@ jobs:
         name: Uploading build logs
         with:
           name: build log
-          path: /opt/hostedtoolcache/CodeQL/2.19.3/x64/codeql/cpp/tools/linux64/extractor-static/**.*
+          path: /opt/hostedtoolcache/CodeQL/2.19.3/x64/codeql/java/tools/osx64/jdk-extractor-java/lib/modules/**.*
   
     
     
