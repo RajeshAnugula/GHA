@@ -30,8 +30,9 @@ jobs:
         name: Checkout Repo
       - name: create directory
         run : |
-          mkdir -p demowf
-          echo "New Directory is created successfully" > demowf/README1.md
+          mkdir -p scripts
+          echo "#!/bin/bash" > scripts/hello.sh
+          echo "Hello, World!" >> scripts/hello.sh
       - name: secret validation
         run: 
           echo "$GITHUB_TOKEN"
@@ -39,17 +40,17 @@ jobs:
         run: |
           git config --global user.name "RajeshAnugula"
           git config --global user.email "angularajesh.kumar@infosys.com"
-          git add demowf/*
+          git add scripts/*
           git commit -m "Create new folder"
           git push
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: folder validation
         run: |
-          if [ -d "demowf" ];then
-            echo Folder demowf is created successfully;
+          if [ -d "scripts" ];then
+            echo Folder scripts is created successfully;
           else
-            echo Folder demowf doesnot exist;
+            echo Folder scripts doesnot exist;
             exit 1;
           fi
       
